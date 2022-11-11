@@ -1,29 +1,40 @@
-import { bread, cheese, lettuce, milk, tomato } from "../question-4/items.js";
-export class ShoppingCart {
-    constructor() {
+"use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShoppingCart = void 0;
+var ShoppingCart = /** @class */ (function () {
+    function ShoppingCart() {
         // Add the correct array type to cart
-        this.cart = [bread, cheese, lettuce, milk, tomato];
+        this.cart = [];
     }
     // Add the correct return type
-    getCostTotal() {
-        const costTotal = this.cart.reduce((total, currentItem) => {
+    ShoppingCart.prototype.getCostTotal = function () {
+        var costTotal = this.cart.reduce(function (total, currentItem) {
             total += currentItem.price;
             return total;
         }, 0);
         return costTotal;
-    }
+    };
     // Add the correct return type
-    getNumberOfItems() {
+    ShoppingCart.prototype.getNumberOfItems = function () {
         return this.cart.length;
-    }
+    };
     // Add the correct return type
-    getCart() {
-        return [...this.cart];
-    }
+    ShoppingCart.prototype.getCart = function () {
+        return __spreadArray([], this.cart, true);
+    };
     // Set the parameter to be of the Item type and set the return
     //    type to be of the correct type
-    addToCart(item) {
-        const itemExists = this.cart.find((currentItem) => {
+    ShoppingCart.prototype.addToCart = function (item) {
+        var itemExists = this.cart.find(function (currentItem) {
             if (currentItem.id === item.id) {
                 return true;
             }
@@ -31,21 +42,22 @@ export class ShoppingCart {
         if (!itemExists) {
             this.cart.push(item);
         }
-    }
+    };
     // Set the parameter to be of the Item type and set the return
     //    type to be of the correct type
-    removeFromCart(item) {
-        const newCart = this.cart.filter((currentItem) => {
+    ShoppingCart.prototype.removeFromCart = function (item) {
+        var newCart = this.cart.filter(function (currentItem) {
             if (currentItem.id !== item.id) {
                 return true;
             }
         });
-        this.cart = [...newCart];
-    }
-}
-console.log();
+        this.cart = __spreadArray([], newCart, true);
+    };
+    return ShoppingCart;
+}());
+exports.ShoppingCart = ShoppingCart;
 // Examples, feel free to delete
-const myCart = new ShoppingCart();
-myCart.addToCart(bread);
-myCart.removeFromCart(bread);
+// const myCart = new ShoppingCart();
+// myCart.addToCart(bread);
+// myCart.removeFromCart(bread);
 //# sourceMappingURL=question-4.js.map

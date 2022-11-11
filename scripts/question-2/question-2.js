@@ -26,5 +26,6 @@ function createGame(_a) {
     console.log('Online play:', onlinePlay);
 }
 // 4. Change these function calls to use the enum you created in step 1
-createGame({ name: 'Fun action game', genre: GameGenre.Action });
-createGame({ name: 'Fun adventure game', genre: GameGenre.Adventure, onlinePlay: true });
+createGame({ name: 'Fun action game', genre: GameGenre.Action, });
+createGame({ name: 'Fun adventure game', genre: GameGenre, onlinePlay: true, });
+//# sourceMappingURL=question-2.js.map

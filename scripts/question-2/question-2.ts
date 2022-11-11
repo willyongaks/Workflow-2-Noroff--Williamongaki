@@ -19,7 +19,7 @@ enum GameGenre {
   Adventure = "Adventure",
   Sport = "Sport",
 }
-interface game {
+interface Game {
   name: string
   genre: GameGenre;
   onlinePlay?: boolean;
@@ -39,4 +39,6 @@ function createGame({ name, genre, onlinePlay = false }) {
 
 // 4. Change these function calls to use the enum you created in step 1
 createGame({ name: 'Fun action game', genre: GameGenre.Action, });
-createGame({ name: 'Fun adventure game', genre: GameGenre.Adventure, onlinePlay: true,});
+createGame({ name: 'Fun adventure game', genre: GameGenre, onlinePlay: true,});
+
+

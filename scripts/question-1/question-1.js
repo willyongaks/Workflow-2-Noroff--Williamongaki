@@ -13,9 +13,11 @@ function createUser(firstName, lastName, age, isAdmin) {
         firstName: firstName,
         lastName: lastName,
         age: age,
-        isAdmin: isAdmin
+        isAdmin: isAdmin,
     };
 }
 var newUser = createUser('Ola', 'Nordmann', 18);
 var newAdmin = createUser('Kari', 'Nordmann', 36, true);
 console.log(newUser);
+console.log(newAdmin);
+//# sourceMappingURL=question-1.js.map

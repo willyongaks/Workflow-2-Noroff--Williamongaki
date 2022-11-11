@@ -16,14 +16,14 @@ Use Parcel as the bundler.
 parcel index.html
 ```
 
-## Question 1: Typescript 1
+## Question 1: Typescript 1 * DONE
 
 Start with the file `question-1/question-1.js` which you should rename to have a `.ts` extension.
 
 - Create a User interface as per the instructions.
 - Convert the `createUser` function to TypeScript and make use of the User interface as the return type.
 
-## Question 2: TypeScript 2
+## Question 2: TypeScript 2 * DONE 
 
 Start with the file `question-2/question-2.js` which you should rename to have a `.ts` extension.
 
