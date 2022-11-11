@@ -8,7 +8,7 @@ console.log("wlliam is here")
 //  age: number
 //  isAdmin: OPTIONAL boolean
 
-interface createUser {
+interface User {
   school: string;
   firstName: string;
   lastName: string;
@@ -22,17 +22,19 @@ interface createUser {
 //  User interface as the return type
 
 
-function createUser(firstName, lastName, age, isAdmin = false) {
+function createUser(firstName, lastName, age, isAdmin = false): User {
   return {
     school: 'Noroff',
-    firstName: "String",
-    lastName: "String",
-    age: Number,
-    isAdmin: Boolean,
+    firstName,
+    lastName,
+    age,
+    isAdmin,
   };
 }
 
 
 const newUser = createUser('Ola', 'Nordmann', 18);
 const newAdmin = createUser('Kari', 'Nordmann', 36, true);
+
+console.log(newUser)
 
