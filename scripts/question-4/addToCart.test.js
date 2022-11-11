@@ -1,16 +1,16 @@
-import { ShoppingCart } from "./question-4";
-import { milk, bread, cheese, tomato, lettuce } from "./items";
+// import { ShoppingCart } from "./question-4";
+// import { milk, bread, cheese, tomato, lettuce } from "./items";
 
 
-test('adding items to cart', () => { 
-    const cart = new ShoppingCart();
-    cart.addToCart(milk);
+// test('adding items to cart', () => { 
+//     const cart = new ShoppingCart();
+//     cart.addToCart(milk);
 
-    console.log(cart.getCart())
-    expect(cart.getCostTotal()).toEqual(19.99)
-    expect(cart.getNumberOfItems()).toEqual(1)
-    expect(cart.getCart()).toEqual([milk])
- })
+//     console.log(cart.getCart())
+//     expect(cart.getCostTotal()).toEqual(19.99)
+//     expect(cart.getNumberOfItems()).toEqual(1)
+//     expect(cart.getCart()).toEqual([milk])
+//  })
 
 
 //  test 2
