@@ -6,4 +6,3 @@ const tomato = { id: 84, name: 'Tomato', price: 3.5 };
 const lettuce = { id: 663, name: 'Lettuce', price: 1.95 };
 
 export { milk, bread, cheese, tomato, lettuce };
-

@@ -32,7 +32,7 @@ export class ShoppingCart {
 
 
   // Add the correct return type
-  getNumberOfItems():number {
+  getNumberOfItems(): number {
     return this.cart.length;
   }
 
@@ -43,7 +43,7 @@ export class ShoppingCart {
 
   // Set the parameter to be of the Item type and set the return
   //    type to be of the correct type
-  addToCart(item: Item) {
+  addToCart(item: Item): void {
     const itemExists = this.cart.find((currentItem) => {
       if (currentItem.id === item.id) {
         return true;
