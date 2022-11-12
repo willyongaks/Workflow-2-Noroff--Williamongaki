@@ -56,7 +56,7 @@ export class ShoppingCart {
 
   // Set the parameter to be of the Item type and set the return
   //    type to be of the correct type
-  removeFromCart(item: Item) {
+  removeFromCart(item: Item):void {
     const newCart = this.cart.filter((currentItem) => {
       if (currentItem.id !== item.id) {
         return true;
