@@ -20,7 +20,7 @@ export class ShoppingCart {
   
 
   // Add the correct return type
-  getCostTotal() {
+  getCostTotal(): number {
     const costTotal = this.cart.reduce((total, currentItem) => {
       total += currentItem.price;
       return total;

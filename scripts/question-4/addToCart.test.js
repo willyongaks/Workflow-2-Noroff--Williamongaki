@@ -15,15 +15,15 @@ import { milk, bread, cheese, tomato, lettuce } from "./items";
 
 //  test 2
 
-// test('adding two items to cart', () => { 
-//     const myCart = new ShoppingCart()
-//     myCart.addToCart([milk,bread])
+test('adding two items to cart', () => { 
+    const myCart = new ShoppingCart()
+    myCart.addToCart([milk,bread])
 
-//     console.log(myCart.getCart())
-//     expect(myCart.getCostTotal(19.99, 9.25)).toEqual(29.24)
-//     expect(myCart.getNumberOfItems()).toEqual(2)
-//     expect(myCart.getCart()).toEqual([milk,bread])
-//  })
+    console.log(myCart.getCart())
+    expect(myCart.getCostTotal()).toEqual(29.5)
+    expect(myCart.getNumberOfItems()).toEqual(2)
+    expect(myCart.getCart()).toEqual([milk,bread])
+ })
 
 
 // test 3
