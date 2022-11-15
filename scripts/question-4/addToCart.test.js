@@ -29,29 +29,31 @@ import { milk, bread, cheese, tomato, lettuce } from "./items";
 
 // test 3
 
-test('adding three identical items ', () => { 
-    const myCart = new ShoppingCart()
-    myCart.addToCart(bread)
-    myCart.addToCart(bread)
-    myCart.addToCart(bread)
+// test('adding three identical items ', () => { 
+//     const myCart = new ShoppingCart()
+//     myCart.addToCart(bread)
+//     myCart.addToCart(bread)
+//     myCart.addToCart(bread)
 
-    console.log(myCart.addToCart())
-    expect(myCart.getCostTotal()).toEqual(5.85)
-    expect(myCart.getNumberOfItems()).toEqual(3)
-    expect(myCart.getCart()).toEqual([lettuce,lettuce,lettuce])
- })
+//     console.log(myCart.addToCart())
+//     expect(myCart.getCostTotal()).toEqual(5.85)
+//     expect(myCart.getNumberOfItems()).toEqual(3)
+//     expect(myCart.getCart()).toEqual([lettuce,lettuce,lettuce])
+//  })
 
 
 // test 4
 
 
-// test('add two items and remove one ', () => { 
-//     const myCart = new ShoppingCart()
-//     myCart.addToCart(tomato,cheese)
-//     // myCart.removeFromCart(cheese)
+test('add two items and remove one ', () => { 
+    const myCart = new ShoppingCart()
+    myCart.addToCart(tomato)
+    myCart.addToCart(bread)
+    myCart.removeFromCart(tomato)
     
-//     console.log(myCart.getCart())
-//     expect(myCart.getCostTotal(19.99,9.25)).toEqual(3.5)
-//     expect(myCart.getNumberOfItems()).toEqual(2)
-//     expect(myCart.getCart()).toEqual([tomato,cheese])
-//  })
+    console.log(myCart.getCart())
+    console.log(myCart.removeFromCart())
+    expect(myCart.getCostTotal()).toEqual(9.25)
+    expect(myCart.getNumberOfItems()).toEqual(2)
+    expect(myCart.getCart()).toEqual([tomato])
+ })
