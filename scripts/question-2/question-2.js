@@ -17,15 +17,15 @@ var GameGenre;
 })(GameGenre || (GameGenre = {}));
 // 3. Convert the function to TypeScript. Use your interface from above as the parameter.
 function createGame(_a) {
-    var name = _a.name, genre = _a.genre, _b = _a.onlinePlay, onlinePlay = _b === void 0 ? false : _b;
+    var string = _a.name, _b = _a.genre, genre = _b === void 0 ? GameGenre : _b, _c = _a.onlinePlay, onlinePlay = _c === void 0 ? false : _c;
     console.log('=============');
     console.log('Game created:');
     console.log('-------------');
-    console.log('Name:', name);
+    console.log('Name:', "name");
     console.log('Genre:', genre);
     console.log('Online play:', onlinePlay);
 }
 // 4. Change these function calls to use the enum you created in step 1
 createGame({ name: 'Fun action game', genre: GameGenre.Action, });
-createGame({ name: 'Fun adventure game', genre: GameGenre, onlinePlay: true, });
+createGame({ name: 'Fun adventure game', genre: GameGenre.Adventure, onlinePlay: true, });
 //# sourceMappingURL=question-2.js.map
