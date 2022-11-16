@@ -22,7 +22,7 @@ interface User {
 //  User interface as the return type
 
 
-function createUser(firstName, lastName, age, isAdmin = false): User {
+function createUser(firstName: string, lastName: string, age: number, isAdmin = false): User {
   return {
     school: 'Noroff',
     firstName,
